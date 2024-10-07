@@ -19,22 +19,32 @@ $(document).ready(function(){
         }
     });
 
+    // Counter functionality
     const counters = document.querySelectorAll('.counter');
-    const speed = 120;
+    const speed = 200; // You can adjust the speed
+    
     counters.forEach(counter => {
-	const updateCount = () => {
-		const target = +counter.getAttribute('data-target');
-		const count = +counter.innerText;
-		const inc = target / speed;
-		if (count < target) {
-			counter.innerText = count + inc;
-			setTimeout(updateCount, 1);
-		} else {
-			counter.innerText = target;
-		}
-	};
-	  updateCount();
-   });
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+        
+            // Calculate the increment
+            const increment = target / speed;
+        
+            // Check if the current count is less than the target
+            if (count < target) {
+                // Round the number before displaying
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 1);
+            } else {
+                // Once target is reached, display the target value
+                counter.innerText = target;
+            }
+        };
+    
+        updateCount();
+    });
+
 
    (function ($) {
     "use strict";
@@ -67,11 +77,26 @@ $('.back-to-top').click(function () {
     return false;
 });
 
-$('.accordion-header').click(function(){
-    $('.accordion .accordion-body').slideUp(500);
-    $(this).next('.accordion-body').slideDown(500);
-    $('.accordion .accordion-header span').text('+');
-    $(this).children('span').text('-');
+$(document).ready(function() {
+    $('.accordion-header').click(function() {
+        const currentBody = $(this).next('.accordion-body');
+        
+        // If the clicked section is open, close it smoothly
+        if (currentBody.is(':visible')) {
+            currentBody.slideUp(400, 'easeInOutQuad'); // Smoother and slower closing animation
+            $(this).children('span').text('+');
+        } else {
+            // Close all other accordion bodies smoothly
+            $('.accordion-body').slideUp(400, 'easeInOutQuad');
+            $('.accordion-header span').text('+');
+
+            // Open the clicked section smoothly
+            currentBody.slideDown(400, 'easeInOutQuad');
+            $(this).children('span').text('-');
+        }
+    });
 });
+
+
 
 });
