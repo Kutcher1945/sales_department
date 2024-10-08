@@ -74,7 +74,7 @@ const services = {
         <h3>Что мы предлагаем</h3>
         <p>Мы разрабатываем пользовательский интерфейс и опыт, которые привлекают внимание и повышают вовлеченность ваших пользователей.</p>
     `,
-    image: 'images/service-1.jpg' // Image for WEB Дизайн
+    image: 'img/service-1.jpg' // Image for WEB Дизайн
 },
 2: {
     title: 'Разработка Приложений',
@@ -91,7 +91,7 @@ const services = {
         <h3>Что мы предлагаем</h3>
         <p>Наша команда разрабатывает как веб-, так и мобильные приложения, которые адаптированы под потребности вашего бизнеса.</p>
     `,
-    image: 'images/service-2.jpg' // Image for Разработка Приложений
+    image: 'img/service-2.jpg' // Image for Разработка Приложений
 },
 3: {
     title: 'SEO оптимизация',
@@ -108,7 +108,7 @@ const services = {
         <h3>Что мы предлагаем</h3>
         <p>Наша команда анализирует структуру вашего сайта и ключевые слова, чтобы улучшить ранжирование в поисковиках.</p>
     `,
-    image: 'images/service-3.jpg' // Image for SEO оптимизация
+    image: 'img/service-3.jpg' // Image for SEO оптимизация
 },
 4: {
     title: 'Социальный Маркетинг',
@@ -125,7 +125,7 @@ const services = {
         <h3>Что мы предлагаем</h3>
         <p>Мы разрабатываем комплексные стратегии по управлению вашими социальными аккаунтами и увеличению вовлеченности аудитории.</p>
     `,
-    image: 'images/service-4.jpg' // Image for Социальный Маркетинг
+    image: 'img/service-4.jpg' // Image for Социальный Маркетинг
 },
 5: {
     title: 'E-Mail Маркетинг',
@@ -142,7 +142,7 @@ const services = {
         <h3>Что мы предлагаем</h3>
         <p>Мы создаем персонализированные email-кампании, которые помогают удерживать клиентов, а также привлекать новых.</p>
     `,
-    image: 'images/service-5.jpg' // Image for E-Mail Маркетинг
+    image: 'img/service-5.jpg' // Image for E-Mail Маркетинг
 },
 6: {
     title: 'Консалтинг и бизнес стратегии',
@@ -159,7 +159,7 @@ const services = {
         <h3>Что мы предлагаем</h3>
         <p>Наша команда экспертов помогает вам анализировать текущую деятельность и предлагать решения для повышения эффективности.</p>
     `,
-    image: 'images/service-6.jpg' // Image for Консалтинг и бизнес стратегии
+    image: 'img/service-6.jpg' // Image for Консалтинг и бизнес стратегии
 },
 7: {
     title: 'Рекрутинг',
@@ -175,7 +175,7 @@ const services = {
             <li>Анализ рынка труда</li>
         </ul>
     `,
-    image: 'images/service-7.jpg' // First new image
+    image: 'img/service-7.jpg' // First new image
 },
 8: {
     title: 'Руководитель отдела продаж',
@@ -190,7 +190,7 @@ const services = {
             <li>Контроль работы менеджеров</li>
         </ul>
     `,
-    image: 'images/service-8.jpg' // Second new image
+    image: 'img/service-8.jpg' // Second new image
 },
 9: {
     title: 'Анализ отдела продаж',
@@ -205,7 +205,7 @@ const services = {
             <li>Анализ качества лидов</li>
         </ul>
     `,
-    image: 'images/service-9.jpg' // Third new image
+    image: 'img/service-9.jpg' // Third new image
 },
 10: {
     title: 'Услуги бизнес-тренера',
@@ -220,7 +220,7 @@ const services = {
             <li>Бизнес-игры и тимбилдинг</li>
         </ul>
     `,
-    image: 'images/service-10.jpg' // Fourth new image
+    image: 'img/service-10.jpg' // Fourth new image
 }
 };
 return services[serviceId];

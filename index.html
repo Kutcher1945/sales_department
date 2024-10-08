@@ -197,7 +197,7 @@
                         <li>Отдел продаж, который генерирует прибыль и перевыполняет план продаж.</li>
                         <li>Сопровождение и консультирование отдела продаж вашей компании в течение 2 месяцев после внедрения.</li>
                     </ul>
-                    <button class="cta-button">РАССЧИТАТЬ ЦЕНУ И ОСТАВИТЬ ЗАЯВКУ</button>
+                    <button class="cta-button" id="whatsappButton">РАССЧИТАТЬ ЦЕНУ И ОСТАВИТЬ ЗАЯВКУ</button>
                     <p class="cta-note">Ответим на все интересующие вас вопросы, расскажем и проконсультируем.</p>
                 </div>
     
@@ -226,64 +226,45 @@
     <!-- Здесь добавить вот это с ватсапа(Заказывая построение) -->
 
     <!-- Услуги -->
-    <div class="container-xxl py-5" id="services">
-        <div class="container">
-            <!-- Сделать меньше или карусель -->
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                <h6 class="rounded-pill-title"  style="font-size: 31px;">Наши услуги</h6>
-                <!-- <h1 class="display-6 mb-4">Мы нацелены на повышение вашего уровня во всех секторах</h1> -->
+    <!-- Services Section with Carousel and onclick -->
+<div class="container-xxl py-5" id="services">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h6 class="rounded-pill-title" style="font-size: 31px;">Наши услуги</h6>
+        </div>
+
+        <!-- Add owl-carousel class to make it a carousel -->
+        <div class="owl-carousel services-carousel">
+            <div class="service-item" style="border: 2px solid black; border-radius: 8px;" onclick="openServicePopup(8)">
+                <img class="img-fluid rounded" src="images/service-8.jpg" alt="">
             </div>
-            
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" onclick="openServicePopup(8)">
-                    <div class="service-item" style="border: 2px solid black; border-radius: 8px;">
-                        <img class="img-fluid rounded" src="images/service-8.jpg" alt="">
-                        <!-- Руководитель отдела продаж -->
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" onclick="openServicePopup(7)">
-                    <div class="service-item" style="border: 2px solid black; border-radius: 8px;">
-                        <img class="img-fluid rounded" src="images/service-7.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" onclick="openServicePopup(9)">
-                    <div class="service-item" style="border: 2px solid black; border-radius: 8px;">
-                        <img class="img-fluid rounded" src="images/service-9.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" onclick="openServicePopup(10)">
-                    <div class="service-item" style="border: 2px solid black; border-radius: 8px;">
-                        <img class="img-fluid rounded" src="images/service-10.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" onclick="openServicePopup(1)">
-                    <div class="service-item" style="border: 2px solid black; border-radius: 8px;">
-                        <img class="img-fluid rounded" src="images/service-1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" onclick="openServicePopup(2)">
-                    <div class="service-item" style="border: 2px solid black; border-radius: 8px;">
-                        <img class="img-fluid rounded" src="images/service-2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" onclick="openServicePopup(3)">
-                    <div class="service-item" style="border: 2px solid black; border-radius: 8px;">
-                        <img class="img-fluid rounded" src="images/service-3.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" onclick="openServicePopup(4)">
-                    <div class="service-item" style="border: 2px solid black; border-radius: 8px;">
-                        <img class="img-fluid rounded" src="images/service-4.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" onclick="openServicePopup(5)">
-                    <div class="service-item" style="border: 2px solid black; border-radius: 8px;">
-                        <img class="img-fluid rounded" src="images/service-5.jpg" alt="">
-                    </div>
-                </div>
+            <div class="service-item" style="border: 2px solid black; border-radius: 8px;" onclick="openServicePopup(7)">
+                <img class="img-fluid rounded" src="images/service-7.jpg" alt="">
+            </div>
+            <div class="service-item" style="border: 2px solid black; border-radius: 8px;" onclick="openServicePopup(9)">
+                <img class="img-fluid rounded" src="images/service-9.jpg" alt="">
+            </div>
+            <div class="service-item" style="border: 2px solid black; border-radius: 8px;" onclick="openServicePopup(10)">
+                <img class="img-fluid rounded" src="images/service-10.jpg" alt="">
+            </div>
+            <div class="service-item" style="border: 2px solid black; border-radius: 8px;" onclick="openServicePopup(1)">
+                <img class="img-fluid rounded" src="images/service-1.jpg" alt="">
+            </div>
+            <div class="service-item" style="border: 2px solid black; border-radius: 8px;" onclick="openServicePopup(2)">
+                <img class="img-fluid rounded" src="images/service-2.jpg" alt="">
+            </div>
+            <div class="service-item" style="border: 2px solid black; border-radius: 8px;" onclick="openServicePopup(3)">
+                <img class="img-fluid rounded" src="images/service-3.jpg" alt="">
+            </div>
+            <div class="service-item" style="border: 2px solid black; border-radius: 8px;" onclick="openServicePopup(4)">
+                <img class="img-fluid rounded" src="images/service-4.jpg" alt="">
+            </div>
+            <div class="service-item" style="border: 2px solid black; border-radius: 8px;" onclick="openServicePopup(5)">
+                <img class="img-fluid rounded" src="images/service-5.jpg" alt="">
             </div>
         </div>
     </div>
+</div>
     
     <!-- Popup Modal for Services -->
     <div id="servicePopup" class="popup-modal">
@@ -327,30 +308,44 @@
     <div class="container" style="padding-top: 50px;">
         <div class="text-center mx-auto mb-5 wow fadeInUp">
             <h2 class="rounded-pill-title" style="font-size: 31px;">Наши Клиенты</h2>
-            <!-- <p style="font-size: 21px;">
-                Мы не просто создаем комфортную атмосферу для вашего бизнеса а строим ваш бизнес как Empire state Building.
-            </p> -->
         </div>
         <div class="owl-carousel clients-carousel">
-            <img src="./images/image.png" alt="Логотип клиента">
-            <img src="./images/image.png" alt="Логотип клиента">
-            <img src="./images/image.png" alt="Логотип клиента">
-            <img src="./images/image.png" alt="Логотип клиента">
-            <img src="./images/image.png" alt="Логотип клиента">
-            <img src="./images/image.png" alt="Логотип клиента">
-            <img src="./images/image.png" alt="Логотип клиента">
-            <img src="./images/image.png" alt="Логотип клиента">
+            <a href="https://alemsport.kz/?ysclid=m20b3q1vdj690409399" target="_blank" rel="noopener noreferrer">
+                <img src="./images/alemsport.png" alt="Логотип клиента">
+            </a>
+            <a href="https://www.vtb-bank.kz/?ysclid=m20bxng05t239990057" target="_blank" rel="noopener noreferrer">
+                <img src="./images/vtb.png" alt="Логотип клиента">
+            </a>
+            <a href="https://bramf.kz/" target="_blank" rel="noopener noreferrer">
+                <img src="./images/bramf.svg" alt="Логотип клиента">
+            </a>
+            <a href="https://geo-sint.com/" target="_blank" rel="noopener noreferrer">
+                <img src="./images/kazgeosint.svg" alt="Логотип клиента">
+            </a>
+            <a href="https://stim-he.ru/" target="_blank" rel="noopener noreferrer">
+                <img src="./images/stim.png" alt="Логотип клиента">
+            </a>
+            <a href="https://grandstone.kz/" target="_blank" rel="noopener noreferrer">
+                <img src="./images/grandstone.jpeg" alt="Логотип клиента">
+            </a>
+            <a target="_blank" rel="noopener noreferrer">
+                <img src="./images/kaztas.jpg" alt="Логотип клиента">
+            </a>
+            <a href="https://vercel.com/kutcher1945s-projects/itry-portfolio-yjvj" target="_blank" rel="noopener noreferrer">
+                <img src="./images/itry.svg" alt="Логотип клиента">
+            </a>
         </div>
     </div>
 </div>
 
 
+
+
 <div class="communicate text-center py-5" id="contact">
-    <h3 style="font-size: 31px;">Свяжитесь с нами</h3>
+    <h3 style="font-size: 31px;" class="rounded-pill-title">Свяжитесь с нами</h3>
     <p>Мы всегда готовы помочь вам.</p>
-    <a href="#contact">
-        <button class="btn btn-primary px-4 py-2 rounded-pill">Связаться сейчас</button>
-    </a>
+    <p class="rounded-pill-title">+77022920005</p>
+        <button class="cta-button" id="whatsappButton">СВЯЗАТЬСЯ С НАМИ</button>
 </div>
 
 
@@ -652,5 +647,42 @@
 
 
   <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+  <script>
+   $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true, // Ensure navigation is enabled
+        dots: false, // Disable dots if needed
+        navText: ["<", ">"], // Use custom arrows for the buttons
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+});
+document.getElementById('whatsappButton').addEventListener('click', function() {
+            var phoneNumber = '77022920005'; // Your WhatsApp phone number
+            var message = encodeURIComponent("Здравствуйте, пишу с сайта BESTWAY!! Хочу оставить заявку!!"); // Optional pre-filled message
+            
+            // Check if user is on a mobile device
+            if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+                // Open WhatsApp on mobile in a new tab
+                window.open('https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message, '_blank');
+            } else {
+                // Open WhatsApp Web on desktop in a new tab
+                window.open('https://web.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message, '_blank');
+            }
+        });
+
+    </script>
+
 </body>
 </html>

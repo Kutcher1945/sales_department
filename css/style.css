@@ -120,7 +120,7 @@ body{
 
 
 .service-item:hover {
-    margin-top: -10px;
+    margin-top: 10px;
     box-shadow: none;
     border: 1px solid #DEE2E6;
 }
@@ -151,7 +151,7 @@ body{
     position: relative;
     transform: scale(0); /* Start small (scale 0) */
     opacity: 0; /* Start with 0 opacity */
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth transition */
+    
 }
 
 /* When modal is active, animate it */
@@ -359,7 +359,7 @@ body{
     left: 0;
 }
 
-.service-item {
+/* .service-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .20);
     border: 1px solid transparent;
     transition: .5s;
@@ -369,7 +369,7 @@ body{
     margin-top: -10px;
     box-shadow: none;
     border: 1px solid #DEE2E6;
-}
+} */
 
 
 /* Steps */
@@ -1083,6 +1083,22 @@ body{
     }
 }
 
+.clients-carousel {
+    display: flex;
+    justify-content: space-around; /* Ensures logos are evenly spaced */
+    align-items: center; /* Vertically aligns logos */
+    flex-wrap: nowrap; /* Prevents logos from wrapping to the next line */
+}
+
+.clients-carousel img {
+    width: 150px; /* Sets a consistent width */
+    max-height: 80px; /* Sets a maximum height */
+    object-fit: contain; /* Maintains aspect ratio */
+    display: block;
+    margin: 0 15px; /* Adds some space between logos */
+}
+
+
 .clients .section-header p {
     padding-bottom: 10px;
     margin-top: 2.5rem;
@@ -1122,6 +1138,32 @@ body{
     background-color: #4F84C4;
 }    
 
+.owl-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Space between the card and the buttons */
+}
+
+.owl-prev, .owl-next {
+    background-color: #002e5f; /* Dark blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px; /* Add space between buttons */
+    transition: background-color 0.3s ease;
+}
+
+.owl-prev:hover, .owl-next:hover {
+    background-color: #00c853; /* Green on hover */
+}
+
+/* Ensure the nav buttons are centered */
+.owl-nav .owl-prev, .owl-nav .owl-next {
+    position: static; /* Remove absolute positioning */
+}
 
 /* For mobile screens with max-width of 768px */
 @media (max-width: 768px) {
