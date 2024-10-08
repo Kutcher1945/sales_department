@@ -10,6 +10,7 @@
     text-decoration: none;
 }
 
+
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -353,11 +354,293 @@ body{
 
 .header .logo img{
     width: 100%;
-    
+    height: 100%;
     top: 0;
     left: 0;
 }
 
+.service-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .20);
+    border: 1px solid transparent;
+    transition: .5s;
+}
+
+.service-item:hover {
+    margin-top: -10px;
+    box-shadow: none;
+    border: 1px solid #DEE2E6;
+}
+
+
+/* Steps */
+.team-item {
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.team-item:hover {
+    background-color: #ffdd57; /* Yellow background on hover */
+    transform: translateY(-10px); /* Lifts the card up slightly */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add more shadow on hover */
+}
+
+.text-center {
+    text-align: center !important;
+  }
+  .text-start {
+    text-align: left !important;
+  }
+
+/* Container Section */
+#steps {    
+    background-size: 200% 200%; /* Increase background size for animation */
+    animation: gradientAnimation 12s ease infinite; /* Smooth gradient animation */
+    padding: 60px 20px; /* Added padding for overall section spacing */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Section Title */
+#steps-section h2 {
+    font-weight: bold;
+    font-size: 2.75rem; /* Increased font size for section heading */
+    margin-bottom: 20px; /* More space below title */
+}
+
+/* Step Card Styling */
+.step-card {
+    background-color: #f9f9f9;
+    border-radius: 16px; /* Smoother look */
+    padding: 25px; /* Consistent padding */
+    border: 2px solid #dcdcdc; /* Softer border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Full height for equal sizing */
+    justify-content: space-between; /* Distribute content evenly */
+}
+
+.step-card:hover {
+    background-color: #002e5f; /* Dark blue hover */
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Soft shadow on hover */
+}
+
+/* Icon Styling */
+.step-card .step-icon {
+    font-size: 3.75rem; /* Increased icon size */
+    color: #333;
+    margin-bottom: 10px; /* Reduced margin to bring the icon closer to the rounded-pill button */
+}
+
+.step-card:hover .step-icon {
+    color: white; /* White icon on hover */
+}
+
+/* Rounded Title */
+.step-card .rounded-pill-title {
+    color: white;
+    background-color: #002e5f;
+    padding: 14px 28px; /* Increased padding for a bolder appearance */
+    border-radius: 50px; /* Gives the rounded-pill appearance */
+    display: inline-block;
+    font-size: 1.75rem; /* Increased font size */
+    margin-bottom: 10px; /* Adjusted margin for spacing between button and text */
+    transition: all 0.3s ease;
+}
+
+.step-card:hover .rounded-pill-title {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255); /* Invert title on hover */
+}
+
+/* Text Styling */
+.step-card h5 {
+    font-size: 1.5rem; /* Increased heading size */
+    font-weight: 600;
+    color: #000000;
+}
+
+.step-card:hover h5 {
+    font-size: 1.5rem; /* Increased heading size */
+    font-weight: 600;
+    color: #ffffff; /* White heading on hover */
+}
+
+.step-card ol {
+    font-size: 1.25rem; /* Increased font size for list */
+    line-height: 1.9;
+    color: #666;
+    padding-left: 20px; /* Better padding for list items */
+}
+
+.step-card:hover ol li {
+    color: rgb(255, 255, 255); /* White text on hover */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .step-card {
+        padding: 20px;
+        margin-bottom: 30px; /* Adds a margin between cards */
+        box-sizing: border-box; /* Ensure padding is included in the element's width/height */
+    }
+    .step-card .step-icon {
+        font-size: 3.25rem; /* Increased icon size on mobile */
+    }
+    .step-card h5 {
+        font-size: 1.35rem; /* Slightly larger heading on mobile */
+    }
+    .step-card ol {
+        font-size: 2.1rem; /* Increased font size on mobile */
+    }
+}
+
+.step-card:hover .step-icon {
+    color: white;
+}
+
+
+
+
+.cta-section {
+    background-color: #002e5f;
+    color: white;
+    padding: 60px 0;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.benefits-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.7rem;
+    line-height: 1.7;
+}
+
+.benefits-list li {
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    background-color: #ffffff;
+    color: #002e5f;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.cta-note {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+/* Statistic Section */
+.statistic-container {
+    background-color: #001e40;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 30%; /* Moves it slightly to the right */
+    width: 100%; /* Increases size */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+}
+
+.statistic h3 {
+    font-size: 4rem; /* Increased the size */
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.statistic p {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 200px; /* Increased height */
+    width: 100%; /* Set chart to take the full width */
+    max-width: 400px; /* Limit chart's maximum width */
+}
+
+.chart .bar {
+    width: 12%;
+    background-color: #00ff6f;
+    border-radius: 5px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .cta-section {
+        text-align: center;
+    }
+    .statistic {
+        margin-top: 30px;
+    }
+    .cta-button {
+        width: 100%;
+    }
+    .statistic-container {
+        margin-left: 0; /* Center the container for mobile */
+        width: 100%; /* Adjust width for mobile */
+    }
+    .chart {
+        max-width: 300px;
+        height: 150px;
+    }
+}
+
+
+
+
+/*** Feature ***/
+.progress {
+    height: 5px;
+}
+
+.progress .progress-bar {
+    width: 0px;
+    transition: 3s;
+}
 
 .header .navbar ul{
     list-style-type: none;
@@ -571,7 +854,9 @@ body{
     color:#2f2f2f;
   }   
 
-.counters {
+
+  
+  .counters {
 	background-image: url(../images/img2.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -583,23 +868,30 @@ body{
 .counters .container {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 30px;
+	grid-gap: 90px;
 	text-align: center;
 }
 
 .counters i {
 	color: #fff;
-	margin-bottom: 5px;
+	font-size: 6rem; /* Increased icon size */
+	margin-bottom: 15px; /* Increased margin for spacing between icon and text */
 }
 
 .counters .counter {
-	font-size: 45px;
-	margin: 10px 0;
+	font-size: 55px; /* Increased font size for counter text */
+	margin: 20px 0;
+}
+
+.counters h3 {
+    font-size: 1.75rem; /* Increased font size for the heading text */
+    line-height: 1.6;   /* Adjusted line-height for better readability */
 }
 
 @media (max-width: 700px) {
 	.counters .container {
 		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 50px; /* Adjusted gap for smaller screens */
 	}
 
 	.counters .container > div:nth-of-type(1),
@@ -608,6 +900,7 @@ body{
 		padding-bottom: 20px;
 	}
 }
+
 
 .section-head-1{
     margin-bottom: 60px;
