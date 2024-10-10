@@ -685,37 +685,42 @@ body{
     display: none;
 }
 
-.home{
+.home {
     min-height: 100vh;
     width: 100vw;
     background-image: url(../images/img1.jpg);
     background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: column;
+    flex-direction: column;
     text-align: center;
-    padding: 0 2rem; /* Increased padding for left and right */
+    padding: 0 2rem;
     position: relative;
     overflow: hidden !important;
 }
 
-.home h1{
+/* Ensuring responsive margin for the content */
+.home-content {
+    margin: 0 2rem; /* Left and right margin */
+}
+
+/* Heading styles */
+.home h1 {
     color: #fff;
     font-size: 5.5rem;
-    margin: 0 2rem; /* Add some margin to h1 to prevent touching the sides */
 }
 
-.home h2{
+.home h2 {
     color: #fff;
     font-size: 3rem;
-    margin: 0 2rem; /* Add some margin to h2 to prevent touching the sides */
 }
 
-
-.home .wave{
+/* Wave animation styles */
+.home .wave {
     position: absolute;
-    bottom: -.5rem;
+    bottom: -0.5rem;
     left: 0;
     height: 11rem;
     width: 100%;
@@ -725,25 +730,76 @@ body{
     background-repeat: repeat-x;
 }
 
-.home .wave2{
+.home .wave2 {
     animation-direction: reverse;
     animation-duration: 6s;
-    opacity: .3;
+    opacity: 0.3;
 }
 
-.home .wave3{
+.home .wave3 {
     animation-duration: 4s;
-    opacity: .5;
+    opacity: 0.5;
 }
 
-@keyframes waves{
-    0%{
+/* Keyframe for wave animation */
+@keyframes waves {
+    0% {
         background-position-x: 0;
     }
-    100%{
+    100% {
         background-position-x: 100rem;
     }
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .home h1 {
+        font-size: 4.5rem;
+    }
+    .home h2 {
+        font-size: 2.5rem;
+    }
+    .home-content {
+        margin: 0 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .home h1 {
+        font-size: 3.5rem;
+    }
+    .home h2 {
+        font-size: 2rem;
+    }
+    .home-content {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home h1 {
+        font-size: 2.8rem;
+    }
+    .home h2 {
+        font-size: 1.8rem;
+    }
+    .home-content {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .home h1 {
+        font-size: 2.2rem;
+    }
+    .home h2 {
+        font-size: 1.5rem;
+    }
+    .home-content {
+        margin: 0 0.5rem;
+    }
+}
+
 
 .about{
     min-height: 55vh;
