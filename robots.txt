@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin/  # Prevents crawlers from indexing admin pages
+Allow: /
+Sitemap: https://betsgeoway.com/sitemap.xml  # Link to your sitemap
