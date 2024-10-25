@@ -699,32 +699,49 @@
     });
 });
 document.getElementById('whatsappButton').addEventListener('click', function() {
-            var phoneNumber = '77012200734'; // Your WhatsApp phone number
-            var message = encodeURIComponent("Здравствуйте, пишу с сайта BESTWAY!! Хочу оставить заявку!!"); // Optional pre-filled message
-            
-            // Check if user is on a mobile device
-            if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-                // Open WhatsApp on mobile in a new tab
-                window.open('https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message, '_blank');
-            } else {
-                // Open WhatsApp Web on desktop in a new tab
-                window.open('https://web.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message, '_blank');
-            }
-        });
+    var phoneNumber = '77012200734'; // Your phone number
+    var message = encodeURIComponent("Здравствуйте, пишу с сайта BESTWAY!! Хочу оставить заявку!!"); // Optional pre-filled WhatsApp message
 
-        document.getElementById('whatsappButton2').addEventListener('click', function() {
-            var phoneNumber = '77012200734'; // Your WhatsApp phone number
-            var message = encodeURIComponent("Здравствуйте, пишу с сайта BESTWAY!! Хочу оставить заявку!!"); // Optional pre-filled message
-            
-            // Check if user is on a mobile device
-            if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-                // Open WhatsApp on mobile in a new tab
-                window.open('https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message, '_blank');
-            } else {
-                // Open WhatsApp Web on desktop in a new tab
-                window.open('https://web.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message, '_blank');
-            }
-        });
+    // Check if user is on a mobile device
+    if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+        // Ask user if they want to call or send a WhatsApp message
+        var choice = confirm("Would you like to call or send a WhatsApp message?\nPress OK to call or Cancel to send a WhatsApp message.");
+        
+        if (choice) {
+            // User chose to call
+            window.location.href = 'tel:' + phoneNumber;
+        } else {
+            // User chose to send a WhatsApp message
+            window.open('https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message, '_blank');
+        }
+    } else {
+        // Open WhatsApp Web on desktop in a new tab
+        window.open('https://web.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message, '_blank');
+    }
+});
+
+document.getElementById('whatsappButton2').addEventListener('click', function() {
+    var phoneNumber = '77012200734'; // Your phone number
+    var message = encodeURIComponent("Здравствуйте, пишу с сайта BESTWAY!! Хочу оставить заявку!!"); // Optional pre-filled WhatsApp message
+
+    // Check if user is on a mobile device
+    if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+        // Ask user if they want to call or send a WhatsApp message
+        var choice = confirm("Would you like to call or send a WhatsApp message?\nPress OK to call or Cancel to send a WhatsApp message.");
+        
+        if (choice) {
+            // User chose to call
+            window.location.href = 'tel:' + phoneNumber;
+        } else {
+            // User chose to send a WhatsApp message
+            window.open('https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message, '_blank');
+        }
+    } else {
+        // Open WhatsApp Web on desktop in a new tab
+        window.open('https://web.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message, '_blank');
+    }
+});
+
 
     </script>
     <script type="application/ld+json">
