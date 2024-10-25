@@ -374,7 +374,7 @@
     <h3 style="font-size: 20px;" class="rounded-pill-title">Свяжитесь с нами</h3>
     <p>Всегда готовы помочь вам.</p>
     <!-- <p class="rounded-pill-title">+77022920005</p> -->
-        <button class="cta-button" id="whatsappButton">СВЯЗАТЬСЯ</button>
+        <button class="cta-button" id="whatsappButton2">СВЯЗАТЬСЯ</button>
 </div>
 
 
@@ -638,7 +638,7 @@
                     <h4>Свяжитесь с нами</h4>
                     <p>
                         <strong class="fa fa-globe"></strong> Алматы<br>
-                        <strong class="fa fa-phone"></strong> +77022920005<br>
+                        <strong class="fa fa-phone"></strong> +77012200734<br>
                         <strong class="fa fa-envelope"></strong> info@example.com<br>
                     </p>
 
@@ -699,7 +699,21 @@
     });
 });
 document.getElementById('whatsappButton').addEventListener('click', function() {
-            var phoneNumber = '77022920005'; // Your WhatsApp phone number
+            var phoneNumber = '77012200734'; // Your WhatsApp phone number
+            var message = encodeURIComponent("Здравствуйте, пишу с сайта BESTWAY!! Хочу оставить заявку!!"); // Optional pre-filled message
+            
+            // Check if user is on a mobile device
+            if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+                // Open WhatsApp on mobile in a new tab
+                window.open('https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message, '_blank');
+            } else {
+                // Open WhatsApp Web on desktop in a new tab
+                window.open('https://web.whatsapp.com/send?phone=' + phoneNumber + '&text=' + message, '_blank');
+            }
+        });
+
+        document.getElementById('whatsappButton2').addEventListener('click', function() {
+            var phoneNumber = '77012200734'; // Your WhatsApp phone number
             var message = encodeURIComponent("Здравствуйте, пишу с сайта BESTWAY!! Хочу оставить заявку!!"); // Optional pre-filled message
             
             // Check if user is on a mobile device
@@ -720,7 +734,7 @@ document.getElementById('whatsappButton').addEventListener('click', function() {
             "name": "Bestway",
             "description": "Мы предоставляем решение по улучшению и созданию отдела продаж под ключ.",
             "url": "https://bestgeoway.com/",
-            "telephone": "+77022920005",
+            "telephone": "+77012200734",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Алматы",
